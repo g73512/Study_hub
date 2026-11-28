@@ -1,128 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#101b3f">
-<title>STUDY HUB | Learn. Grow. Achieve.</title>
+<title>STUDY HUB | Learn • Practice • Grow</title>
 <style>
-:root{--bg:#f5f7ff;--ink:#17213c;--muted:#71809c;--navy:#101b3f;--purple:#6c5ce7;--cyan:#28c7d9;--pink:#ff6fae;--gold:#ffbd59;--line:#e6e9f5;--white:#fff}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
-button,input,select,textarea{font:inherit}button{cursor:pointer}
-.hero{background:radial-gradient(circle at 85% 10%,#4c4bd8 0,transparent 28%),radial-gradient(circle at 10% 100%,#167b9e 0,transparent 35%),linear-gradient(120deg,#101b3f,#25215e);color:#fff;padding:25px 18px 36px}
-.wrap{max-width:1160px;margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.7px;font-size:20px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--cyan),#8874ff);display:grid;place-items:center;font-size:22px;box-shadow:0 8px 24px #050d3155}
-.tag{font-size:12px;background:#ffffff1c;border:1px solid #ffffff2c;padding:8px 12px;border-radius:30px}
-.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:25px;padding-top:35px}
-h1{font-size:clamp(34px,5vw,54px);line-height:1.06;margin:0 0 14px;letter-spacing:-1.5px}.gradient{background:linear-gradient(90deg,#71e4ed,#c7a8ff,#ff9ec8);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{color:#d9def8;max-width:590px;line-height:1.7;margin:0 0 22px}.cta{display:inline-block;background:linear-gradient(90deg,#39cbd8,#8c78ff);color:#101b3f;border:0;border-radius:12px;padding:12px 18px;font-weight:900;text-decoration:none}
-.hero-art{min-height:205px;border:1px solid #ffffff2c;background:linear-gradient(145deg,#ffffff20,#ffffff08);border-radius:26px;padding:20px;position:relative;overflow:hidden;box-shadow:0 20px 50px #080f3455}
-.orbit{width:160px;height:160px;border:1px dashed #ffffff70;border-radius:50%;position:absolute;right:28px;top:17px}.bookemoji{font-size:88px;position:absolute;right:62px;top:42px;filter:drop-shadow(0 15px 14px #0005);transform:rotate(-9deg)}.float{position:absolute;background:#fff;color:var(--navy);padding:10px 13px;border-radius:13px;font-size:12px;font-weight:800;box-shadow:0 10px 25px #0003}.f1{left:16px;top:28px}.f2{left:32px;bottom:23px}.f3{right:18px;bottom:20px}
-nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 5px 20px #1a24500a}
-.navinner{max-width:1160px;margin:auto;display:flex;gap:7px;padding:10px 14px;overflow:auto}
-nav button{border:0;background:transparent;color:#66718d;padding:10px 13px;border-radius:10px;font-weight:750;white-space:nowrap}
-nav button.active,nav button:hover{background:#eeedff;color:#5c4bd2}
-main{max-width:1160px;margin:24px auto;padding:0 15px}.panel{display:none}.panel.active{display:block}
-.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:0 0 15px}.eyebrow{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--purple);font-weight:900}.sectionhead h2{font-size:25px;margin:5px 0 0;letter-spacing:-.5px}.sub{color:var(--muted);font-size:14px;margin:5px 0 0}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:17px;box-shadow:0 8px 24px #1c2a5808;margin-bottom:14px}
-.stat{display:flex;align-items:center;gap:13px}.ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:22px;background:#eeedff}.stat b{font-size:22px;display:block}.stat small{color:var(--muted)}
-.feature{min-height:155px;position:relative;overflow:hidden}.feature .bigico{font-size:28px;width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:#f0efff;margin-bottom:12px}.feature h3{margin:0 0 7px}.feature p{font-size:13px;color:var(--muted);line-height:1.55;margin:0}.feature:after{content:"";position:absolute;width:95px;height:95px;border-radius:50%;right:-40px;bottom:-42px;background:#f0efff}
-label{display:block;font-size:13px;font-weight:800;margin:10px 0 6px;color:#3a4663}
-select,input,textarea{width:100%;border:1px solid #dce2f0;border-radius:11px;padding:11px 12px;background:#fff;color:var(--ink);outline:none}
-select:focus,input:focus,textarea:focus{border-color:#8173ef;box-shadow:0 0 0 3px #8173ef1c}
-.btn{border:0;border-radius:11px;padding:11px 15px;background:#eeedff;color:#5c4bd2;font-weight:850}.btn.primary{background:linear-gradient(90deg,#6558e8,#8876f2);color:#fff}.btn.dark{background:var(--navy);color:#fff}
-.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.muted{color:var(--muted);font-size:13px;line-height:1.6}
-.bookcard{border:1px solid var(--line);border-radius:15px;padding:15px;background:linear-gradient(145deg,#fff,#f9f9ff)}
-.bookcard a{color:#5d50d6;font-weight:850;text-decoration:none}.bookcard a:hover{text-decoration:underline}
-.notecontent{background:#f8f9ff;border:1px solid #e7e8fa;border-radius:14px;padding:17px;white-space:pre-wrap;line-height:1.8;min-height:100px}
-.task{display:flex;gap:11px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}.task input{width:18px;height:18px;accent-color:#6c5ce7}.task.done span{text-decoration:line-through;color:#8a94a9}
-.question{padding:14px;border:1px solid var(--line);border-radius:14px;margin:12px 0}.question label{font-weight:500;display:flex;align-items:center;gap:8px}.question input{width:auto}
-.progressbar{height:10px;background:#edf0f8;border-radius:30px;overflow:hidden}.progressbar span{display:block;height:100%;background:linear-gradient(90deg,#28c7d9,#7868ec);width:0}
-.tip{background:linear-gradient(110deg,#f0efff,#e9faff);border:1px solid #e2e2fb;border-radius:16px;padding:16px;line-height:1.6}
-footer{text-align:center;color:#8993aa;padding:28px 15px;font-size:12px}
-@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}.hero-art{min-height:180px}}
-@media(max-width:520px){.grid,.grid2{grid-template-columns:1fr 1fr;gap:9px}.card{padding:13px}.feature{min-height:170px}.feature p{font-size:12px}.tag{display:none}.hero{padding-bottom:25px}.hero-grid{padding-top:25px}.bookemoji{right:35px}.orbit{right:8px}}
-@media print{nav,.hero,.no-print,footer{display:none!important}body{background:white}main{margin:0}.panel{display:none!important}#notes.panel{display:block!important}.card{box-shadow:none;border:0}}
-</style></head>
+:root{--navy:#101b3f;--ink:#18233d;--muted:#66738d;--bg:#f4f6ff;--purple:#6759e8;--cyan:#22bfd0;--pink:#f078ad;--line:#e5e9f5;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select{font:inherit}button,a{cursor:pointer}
+.hero{color:white;padding:26px 18px 42px;background:radial-gradient(circle at 85% 10%,#5d50d7 0,transparent 28%),radial-gradient(circle at 5% 100%,#087e9a 0,transparent 35%),linear-gradient(120deg,#101b3f,#25215e)}
+.wrap{max-width:1180px;margin:auto}.brand{display:flex;align-items:center;gap:11px;font-weight:950;letter-spacing:1px;font-size:21px}.logo{display:grid;place-items:center;width:45px;height:45px;border-radius:15px;background:linear-gradient(135deg,var(--cyan),#8874ff);font-size:24px}
+.heroGrid{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:center;padding-top:35px}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:900;color:#7d8aa8}.hero .eyebrow{color:#9debf0}
+h1{font-size:clamp(36px,5vw,58px);line-height:1.04;letter-spacing:-1.8px;margin:10px 0 15px}.gradient{background:linear-gradient(90deg,#71e4ed,#c7a8ff,#ff9ec8);background-clip:text;color:transparent}.hero p{color:#dce2fb;line-height:1.7;max-width:650px}
+.heroArt{border:1px solid #ffffff35;border-radius:28px;padding:24px;min-height:220px;background:linear-gradient(145deg,#ffffff22,#ffffff08);box-shadow:0 20px 55px #080f3455}.artIcon{font-size:70px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.chip{font-size:12px;padding:8px 12px;border-radius:30px;background:#ffffff1c;border:1px solid #ffffff30}
+nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 4px 18px #15204a0a}.navinner{max-width:1180px;margin:auto;display:flex;gap:7px;padding:10px 14px;overflow:auto}nav button{white-space:nowrap;border:0;border-radius:11px;background:transparent;padding:11px 14px;color:#586681;font-weight:800}nav button.active,nav button:hover{background:#eeedff;color:#5548d4}
+main{max-width:1180px;margin:26px auto;padding:0 15px}.panel{display:none}.panel.active{display:block}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:5px 0 18px}.sectionhead h2{font-size:27px;margin:5px 0}.sub{color:var(--muted);margin:0;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:white;border:1px solid var(--line);border-radius:20px;padding:19px;box-shadow:0 8px 25px #18234d08}.feature{min-height:190px;position:relative;overflow:hidden}.feature .ico{font-size:34px}.feature h3{margin:10px 0 6px}.feature p,.muted{color:var(--muted);font-size:13px;line-height:1.6}.feature button{margin-top:8px}
+.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}.stat{padding:16px;border-radius:17px;background:linear-gradient(135deg,#fff,#f0f2ff);border:1px solid var(--line)}.stat b{display:block;font-size:26px;color:#5145cb}.stat span{font-size:12px;color:var(--muted)}
+button.primary,.btn{border:0;border-radius:12px;padding:11px 15px;background:linear-gradient(100deg,#6256df,#8372f4);color:#fff;font-weight:850;text-decoration:none;display:inline-block}button.soft{border:1px solid #dddff5;background:#f4f3ff;color:#5145cb;border-radius:11px;padding:10px 13px;font-weight:800}
+input,select{width:100%;padding:12px;border:1px solid #dce2ef;border-radius:11px;background:#fff;color:var(--ink);margin:6px 0 12px}label{font-size:13px;font-weight:800;color:#43516c}
+.book{border:1px solid var(--line);border-radius:17px;padding:16px;background:#fff}.book .ico{font-size:29px}.book a{color:#5a4ed4;font-weight:850;text-decoration:none}.book p{font-size:13px;color:var(--muted);line-height:1.5}
+.noteBox{white-space:pre-wrap;line-height:1.85;background:#fbfcff;border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:12px;font-size:15px}.noteBox h3{margin-top:0}.tag{display:inline-block;background:#eef0ff;color:#5a4ed4;padding:5px 9px;border-radius:30px;font-size:11px;font-weight:850}
+.question{padding:15px 0;border-bottom:1px solid var(--line)}.question label{display:flex;gap:9px;align-items:center;font-weight:600;margin:9px 0}.question input{width:auto;margin:0}
+.progress{height:11px;background:#edf0f8;border-radius:30px;overflow:hidden}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--cyan),var(--purple));width:0}
+.task{display:flex;gap:10px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}.task input{width:auto;margin:0}.task.done span{text-decoration:line-through;color:#8c96aa}
+footer{text-align:center;padding:30px;color:#8a94aa;font-size:12px}
+@media(max-width:800px){.heroGrid{grid-template-columns:1fr}.heroArt{min-height:150px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.statgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.grid,.grid2{grid-template-columns:1fr}.sectionhead{display:block}.card{padding:15px}.hero{padding-bottom:28px}.heroGrid{padding-top:22px}.heroArt{display:none}main{margin-top:18px}}
+@media print{nav,.hero,.no-print,footer{display:none!important}body{background:white}main{margin:0}.panel{display:none!important}#notes.panel{display:block!important}.card{box-shadow:none}}
+</style>
+</head>
 <body>
 <header class="hero"><div class="wrap">
-<div class="top"><div class="brand"><span class="logo">🎓</span> STUDY HUB</div><span class="tag">✨ Your learning journey starts here</span></div>
-<div class="hero-grid"><div><div class="eyebrow" style="color:#9debf0">LEARN • PRACTICE • ACHIEVE</div><h1>Make learning<br><span class="gradient">your superpower.</span></h1><p>One friendly place for school learning, smart study habits, career discovery and daily progress. Explore, practise and keep moving forward.</p><a class="cta" href="#dashboard" onclick="showTab('library')">Explore Learning&nbsp; →</a></div>
-<div class="hero-art"><div class="orbit"></div><div class="bookemoji">📚</div><span class="float f1">🚀 Dream big</span><span class="float f2">⭐ Small steps matter</span><span class="float f3">💡 Keep learning</span></div></div>
+<div class="brand"><span class="logo">🎓</span> STUDY HUB <span class="chip">OPEN LEARNING • NO LOGIN</span></div>
+<div class="heroGrid"><div><div class="eyebrow">LEARN • UNDERSTAND • PRACTISE • EXCEL</div><h1>Your learning journey<br><span class="gradient">starts right here.</span></h1><p>A friendly study space for school students. Explore books, chapter notes, practice questions, science facts and learning activities — all in one place.</p><div class="chips"><span class="chip">📚 Classes 1–12</span><span class="chip">📝 Chapter Notes</span><span class="chip">🧠 Practice Tests</span><span class="chip">✨ Free to explore</span></div></div>
+<div class="heroArt"><div class="artIcon">📚 ✨</div><h2>Small steps. Big dreams.</h2><p>Read a little, practise a little, and keep growing every day.</p></div></div>
 </div></header>
-<nav><div class="navinner" id="nav"><button class="active" data-tab="dashboard">Dashboard</button><button data-tab="library">Book Links</button><button data-tab="notes">Study Notes</button><button data-tab="quiz">Practice Quiz</button><button data-tab="planner">Study Planner</button><button data-tab="careers">Career Explorer</button><button data-tab="progress">My Progress</button><button data-tab="admin">Admin Dashboard</button></div></nav>
+<nav><div class="navinner">
+<button class="active" data-tab="home">🏠 Home</button><button data-tab="library">📚 Books Library</button><button data-tab="notes">✍️ Study Notes</button><button data-tab="practice">🧠 Practice Zone</button><button data-tab="gk">🌍 GK & Facts</button><button data-tab="planner">🗓 Study Planner</button><button data-tab="careers">🎯 Career Corner</button>
+</div></nav>
 <main>
-<section id="dashboard" class="panel active">
-<div class="sectionhead"><div><div class="eyebrow">YOUR SPACE</div><h2>Welcome, future achiever! 👋</h2><p class="sub">Choose a learning goal and make today count.</p></div></div>
+<section id="home" class="panel active">
+<div class="sectionhead"><div><div class="eyebrow">WELCOME TO YOUR STUDY SPACE</div><h2>What would you like to learn today?</h2><p class="sub">Choose a section and start learning — no account or registration needed.</p></div></div>
+<div class="statgrid"><div class="stat"><b>12</b><span>School classes</span></div><div class="stat"><b>8+</b><span>Learning subjects</span></div><div class="stat"><b>25+</b><span>Starter note topics</span></div><div class="stat"><b>20</b><span>Practice questions</span></div></div>
 <div class="grid">
-<div class="card stat"><div class="ico">📚</div><div><b>12</b><small>School grades</small></div></div>
-<div class="card stat"><div class="ico" style="background:#e8fbfb">🧠</div><div><b>Quiz</b><small>Practice & learn</small></div></div>
-<div class="card stat"><div class="ico" style="background:#fff2f8">🎯</div><div><b>Goals</b><small>Plan your future</small></div></div>
-<div class="card stat"><div class="ico" style="background:#fff6e8">🏆</div><div><b id="dashDone">0</b><small>Tasks completed</small></div></div>
+<div class="card feature"><div class="ico">📘</div><h3>Books & Textbooks</h3><p>Find official NCERT books, e-books and learning resources by class.</p><button class="soft" onclick="showTab('library')">Explore books →</button></div>
+<div class="card feature"><div class="ico">✍️</div><h3>Chapter-wise Notes</h3><p>Simple explanations, key points, definitions and examples.</p><button class="soft" onclick="showTab('notes')">Read notes →</button></div>
+<div class="card feature"><div class="ico">🧠</div><h3>Practice & Test</h3><p>Try MCQs from Maths, Science, English, Social Science and GK.</p><button class="soft" onclick="showTab('practice')">Start practice →</button></div>
+<div class="card feature"><div class="ico">🌍</div><h3>GK & Interesting Facts</h3><p>Learn about India, space, nature, inventions and our world.</p><button class="soft" onclick="showTab('gk')">Discover facts →</button></div>
+<div class="card feature"><div class="ico">🗓</div><h3>Study Planner</h3><p>Make a simple daily checklist and track completed study tasks.</p><button class="soft" onclick="showTab('planner')">Plan study →</button></div>
+<div class="card feature"><div class="ico">🎯</div><h3>Career Corner</h3><p>Explore different fields and the subjects that build a strong base.</p><button class="soft" onclick="showTab('careers')">Explore careers →</button></div>
 </div>
-<div class="sectionhead"><div><div class="eyebrow">EXPLORE</div><h2>Your learning toolkit</h2></div></div>
-<div class="grid">
-<div class="card feature"><div class="bigico">📖</div><h3>Book Links</h3><p>Open official textbook and learning-resource websites.</p><div class="actions"><button class="btn" onclick="showTab('library')">Open book links →</button></div></div>
-<div class="card feature"><div class="bigico" style="background:#e8fbfb">✍️</div><h3>Easy Study Notes</h3><p>Revise key ideas with simple, beginner-friendly notes.</p><div class="actions"><button class="btn" onclick="showTab('notes')">Read notes →</button></div></div>
-<div class="card feature"><div class="bigico" style="background:#fff2f8">🧩</div><h3>Quick Quizzes</h3><p>Test your understanding and learn from every attempt.</p><div class="actions"><button class="btn" onclick="showTab('quiz')">Take a quiz →</button></div></div>
-<div class="card feature"><div class="bigico" style="background:#fff6e8">🗓️</div><h3>Daily Study Plan</h3><p>Break big goals into small tasks you can finish each day.</p><div class="actions"><button class="btn" onclick="showTab('planner')">Plan today →</button></div></div>
-</div>
-<div class="tip">🌟 <b>Today's reminder:</b> You do not have to learn everything in one day. Learn one new thing, practise it, and come back tomorrow.</div>
+<div class="card" style="margin-top:15px;background:linear-gradient(110deg,#f0efff,#e9fbff)"><b>🌟 Study tip</b><p class="muted" style="margin:7px 0 0">Read a topic, close the book, explain it in your own words, and then solve a few questions. This helps you check what you understood.</p></div>
 </section>
 
 <section id="library" class="panel">
-<div class="sectionhead"><div><div class="eyebrow">DIGITAL LIBRARY</div><h2>Official Book Links 📚</h2><p class="sub">Books are not stored here. Choose your class and subject, then open an official book portal.</p></div></div>
-<div class="card"><div class="grid2"><div><label for="bookClass">Select grade</label><select id="bookClass"></select></div><div><label for="bookSubject">Select subject</label><select id="bookSubject"></select></div></div>
-<div class="actions"><a class="btn primary" href="https://ncert.nic.in/textbook.php" target="_blank" rel="noopener">Open NCERT Textbooks ↗</a><a class="btn" href="https://epathshala.nic.in/" target="_blank" rel="noopener">Explore ePathshala ↗</a></div>
-</div>
-<div class="grid">
-<div class="bookcard"><div style="font-size:27px">📘</div><h3>NCERT Textbooks</h3><p class="muted">Official textbook PDFs for available grades and subjects.</p><a href="https://ncert.nic.in/textbook.php" target="_blank" rel="noopener">Browse official books ↗</a></div>
-<div class="bookcard"><div style="font-size:27px">📱</div><h3>ePathshala</h3><p class="muted">Digital textbooks and learning materials from NCERT.</p><a href="https://epathshala.nic.in/" target="_blank" rel="noopener">Open ePathshala ↗</a></div>
-<div class="bookcard"><div style="font-size:27px">🎓</div><h3>DIKSHA</h3><p class="muted">School learning content and educational resources.</p><a href="https://diksha.gov.in/" target="_blank" rel="noopener">Visit DIKSHA ↗</a></div>
-<div class="bookcard"><div style="font-size:27px">🌍</div><h3>SWAYAM</h3><p class="muted">Online courses and learning opportunities.</p><a href="https://swayam.gov.in/" target="_blank" rel="noopener">Explore courses ↗</a></div>
-</div>
-<p class="muted">Note: This website links to official learning portals; it does not copy or host every textbook PDF. Book availability, language and syllabus may vary by grade and board.</p>
+<div class="sectionhead"><div><div class="eyebrow">DIGITAL BOOKSHELF</div><h2>Books & Learning Resources</h2><p class="sub">Choose a class and subject, then open trusted official learning portals.</p></div></div>
+<div class="card"><div class="grid2"><div><label for="bookClass">Choose class</label><select id="bookClass"></select></div><div><label for="bookSubject">Choose subject</label><select id="bookSubject"></select></div></div><p class="muted" id="bookHint">Select your class and subject. The official textbook portal lets you choose the matching book and PDF when available.</p><a class="btn" href="https://ncert.nic.in/textbook.php" target="_blank" rel="noopener">Open NCERT Textbooks ↗</a></div>
+<div class="grid" style="margin-top:14px">
+<div class="book"><div class="ico">📘</div><h3>NCERT Textbooks</h3><p>Official textbook PDFs for classes and subjects available on the NCERT portal.</p><a href="https://ncert.nic.in/textbook.php" target="_blank" rel="noopener">Browse NCERT books ↗</a></div>
+<div class="book"><div class="ico">📱</div><h3>ePathshala</h3><p>NCERT digital textbooks and learning materials for school students.</p><a href="https://epathshala.nic.in/" target="_blank" rel="noopener">Open ePathshala ↗</a></div>
+<div class="book"><div class="ico">🎓</div><h3>DIKSHA</h3><p>School curriculum resources, learning content and practice materials.</p><a href="https://diksha.gov.in/" target="_blank" rel="noopener">Explore DIKSHA ↗</a></div>
+<div class="book"><div class="ico">🏫</div><h3>CBSE Academic</h3><p>Curriculum, sample question papers and academic resources for CBSE.</p><a href="https://cbseacademic.nic.in/" target="_blank" rel="noopener">Open CBSE Academic ↗</a></div>
+<div class="book"><div class="ico">🌐</div><h3>National Digital Library</h3><p>Discover books, study materials and educational resources.</p><a href="https://ndl.iitkgp.ac.in/" target="_blank" rel="noopener">Explore digital library ↗</a></div>
+<div class="book"><div class="ico">🧪</div><h3>Virtual Labs</h3><p>Explore science and engineering concepts through virtual experiments.</p><a href="https://www.vlab.co.in/" target="_blank" rel="noopener">Visit Virtual Labs ↗</a></div>
+</div><p class="muted" style="margin-top:14px">STUDY HUB links to official and educational portals; it does not reproduce copyrighted textbooks. Book availability and syllabus can vary by class, board and language.</p>
 </section>
 
 <section id="notes" class="panel">
-<div class="sectionhead"><div><div class="eyebrow">REVISION CORNER</div><h2>Simple study notes ✍️</h2><p class="sub">Select a subject and topic to read a quick explanation.</p></div></div>
-<div class="card"><div class="grid2"><div><label for="noteGrade">Grade</label><select id="noteGrade"></select></div><div><label for="noteSubject">Subject</label><select id="noteSubject"></select></div></div><label for="noteTopic">Topic</label><select id="noteTopic"></select>
-<div class="notecontent" id="noteContent" style="margin-top:14px">Choose a subject and topic to display notes here.</div><div class="actions no-print"><button class="btn primary" onclick="window.print()">Print / Save as PDF</button></div>
-<p class="muted">Starter notes are included for Classes 1–12 across all six subjects. They are not a replacement for your prescribed textbook or official syllabus.</p></div>
+<div class="sectionhead"><div><div class="eyebrow">READ • REVISE • REMEMBER</div><h2>Study Notes Library</h2><p class="sub">Choose a subject and topic to read simple notes with examples and key points.</p></div></div>
+<div class="card"><div class="grid2"><div><label for="noteSubject">Subject</label><select id="noteSubject"></select></div><div><label for="noteTopic">Topic</label><select id="noteTopic"></select></div></div><div class="noteBox" id="noteContent">Choose a subject and topic to begin reading.</div><div class="no-print" style="margin-top:14px"><button class="primary" onclick="window.print()">Print / Save notes as PDF</button></div></div>
 </section>
 
-<section id="quiz" class="panel"><div class="sectionhead"><div><div class="eyebrow">BRAIN BOOST</div><h2>Quick practice quiz 🧠</h2><p class="sub">Choose one answer for each question and check your score.</p></div></div>
-<div class="card"><div id="quizArea"></div><button class="btn primary" onclick="checkQuiz()">Check my answers</button><p id="quizResult" style="font-weight:850;color:#5d50d6"></p></div></section>
-
-<section id="planner" class="panel"><div class="sectionhead"><div><div class="eyebrow">BUILD A GOOD HABIT</div><h2>Today's study planner 🗓️</h2><p class="sub">Tick off tasks as you complete them.</p></div></div>
-<div class="card"><div class="stat"><div class="ico">🔥</div><div><b id="taskCount">0 / 0</b><small>Daily progress</small></div></div><div class="progressbar" style="margin:13px 0 8px"><span id="bar"></span></div><div id="tasks"></div><label for="newTask">Add your own study task</label><input id="newTask" placeholder="e.g. Read 5 pages of Science"><div class="actions"><button class="btn primary" onclick="addTask()">+ Add task</button></div></div>
+<section id="practice" class="panel">
+<div class="sectionhead"><div><div class="eyebrow">TEST YOUR UNDERSTANDING</div><h2>Practice Zone</h2><p class="sub">Choose a topic, answer the questions and check your score.</p></div></div>
+<div class="card"><label for="quizTopic">Choose question category</label><select id="quizTopic"><option value="all">All subjects</option><option value="math">Mathematics</option><option value="science">Science</option><option value="english">English</option><option value="social">Social Science</option><option value="gk">General Knowledge</option></select><button class="primary" onclick="startQuiz()">Start / Refresh Test</button><div id="quizArea"></div><div id="quizResult" style="font-weight:850;color:#5548d4;margin-top:12px"></div></div>
 </section>
 
-<section id="careers" class="panel"><div class="sectionhead"><div><div class="eyebrow">DREAM • DISCOVER • PREPARE</div><h2>Career explorer 🎯</h2><p class="sub">Explore a few career paths and what you can start learning.</p></div></div>
-<div class="card"><label for="careerSelect">Choose a career</label><select id="careerSelect"></select><div class="notecontent" id="careerInfo" style="margin-top:12px"></div><p class="muted">Eligibility, exams and selection rules can change. Always confirm details on the official recruiting body's website.</p></div>
+<section id="gk" class="panel">
+<div class="sectionhead"><div><div class="eyebrow">KNOW MORE EVERY DAY</div><h2>GK & Amazing Facts</h2><p class="sub">Short facts to grow curiosity and general awareness.</p></div></div>
+<div class="grid" id="factGrid"></div>
 </section>
 
-<section id="progress" class="panel"><div class="sectionhead"><div><div class="eyebrow">EVERY STEP COUNTS</div><h2>My progress 🏆</h2><p class="sub">Your checked planner tasks are saved on this device.</p></div></div>
-<div class="card"><div class="stat"><div class="ico">⭐</div><div><b id="doneCount">0</b><small>Tasks completed</small></div></div><div class="progressbar" style="margin:15px 0"><span id="progressBar"></span></div><p id="progressText" class="muted">Start with one small task today.</p><div class="tip" style="margin:14px 0"><b>⭐ Study Rewards</b><p id="rewardText" class="muted">Complete tasks to earn points and badges.</p><div id="rewardBadges" class="actions"></div></div><button class="btn" onclick="resetTasks()">Reset today's checkmarks</button></div>
+<section id="planner" class="panel">
+<div class="sectionhead"><div><div class="eyebrow">MAKE A LITTLE PROGRESS DAILY</div><h2>My Study Planner</h2><p class="sub">Add tasks, tick them when completed and see your daily progress.</p></div></div>
+<div class="card"><label for="newTask">Add a study task</label><div class="grid2"><input id="newTask" placeholder="Example: Revise Science chapter 2"><button class="primary" onclick="addTask()">+ Add Task</button></div><div id="tasks"></div><div class="progress" style="margin-top:16px"><span id="bar"></span></div><p class="muted" id="taskCount">0 of 0 tasks completed</p><button class="soft" onclick="resetTasks()">Reset checkmarks</button></div>
 </section>
-<section id="admin" class="panel"><div class="sectionhead"><div><div class="eyebrow">ADMIN TOOLS</div><h2>Admin Dashboard ⚙️</h2><p class="sub">Demo content-management area.</p></div></div><div class="card"><h3>Manage study content</h3><p class="muted">Use this area as the planned place to add and organise more class-wise notes and official book links. A secure online admin system needs a backend and admin authentication.</p><p class="muted">Current demo notes are built into this HTML file. Ask for an expanded admin editor when the website is connected to a database.</p></div></section>
+
+<section id="careers" class="panel">
+<div class="sectionhead"><div><div class="eyebrow">DREAM • EXPLORE • PREPARE</div><h2>Career Corner</h2><p class="sub">Discover different fields and the school subjects that help build their foundations.</p></div></div>
+<div class="grid" id="careerGrid"></div>
+</section>
 </main>
-<footer>STUDY HUB • Learn something today. Become someone tomorrow. ✨<br>Educational demo website • Built for curious learners</footer>
+<footer>STUDY HUB • Learn something new every day ✨<br>Independent learning resource • Always check your school's current syllabus.</footer>
+
 <script>
-const grades=Array.from({length:12},(_,i)=>"Grade "+(i+1));
-const subjects=["Mathematics","Science","English","Hindi","Social Science","Computer Science"];
+const classes=Array.from({length:12},(_,i)=>"Class "+(i+1));
+const subjects=["Mathematics","Science","English","Hindi","Social Science","Computer Science","General Knowledge"];
 function fill(id,arr){document.getElementById(id).innerHTML=arr.map(x=>`<option>${x}</option>`).join("")}
-["bookClass","noteGrade"].forEach(id=>fill(id,grades));["bookSubject","noteSubject"].forEach(id=>fill(id,subjects));
-const notes={};
-const noteTopics={
-"Mathematics":["Numbers and counting","Addition and subtraction","Multiplication and division","Fractions and decimals","Algebra and equations"],
-"Science":["Living and non-living things","Plants and animals","Matter and materials","Force, energy and motion","Ecosystems and environment"],
-"English":["Words and sentences","Nouns and verbs","Parts of speech","Tenses and grammar","Reading and writing skills"],
-"Hindi":["वर्ण और शब्द","संज्ञा और सर्वनाम","क्रिया और विशेषण","काल और वाक्य","अनुच्छेद लेखन"],
-"Social Science":["Our family and community","Maps and directions","History and timelines","Democracy and Constitution","Resources and environment"],
-"Computer Science":["Parts of a computer","Hardware and software","Using the internet safely","Algorithms and coding","Data and digital citizenship"]
-};
-const noteExplanations={
-"Mathematics":["Numbers help us count, compare and measure. Practise reading, writing and arranging numbers.","Addition combines quantities. Subtraction finds the difference. Use objects or drawings to check your answer.","Multiplication is repeated addition. Division shares quantities into equal groups. Learn tables and practise both operations.","A fraction shows equal parts of a whole. The numerator shows selected parts and the denominator shows total equal parts. Decimals also represent parts of a whole.","A variable is a letter used for an unknown number. An equation says two expressions are equal. Use inverse operations and keep both sides balanced."],
-"Science":["Living things grow and carry out life processes. Non-living things do not. Observe similarities and differences around you.","Plants make food using sunlight, water and carbon dioxide. Animals depend on plants or other animals for food.","Matter has mass and occupies space. Solids, liquids and gases have different properties. Heating or cooling can change the state of some materials.","A force is a push or pull that can change motion or shape. Energy is needed to make things happen. Forms include light, heat, sound and electrical energy.","An ecosystem includes living organisms and their surroundings. Food chains show how energy passes between organisms. Protecting habitats helps biodiversity."],
-"English":["Words join to make sentences. A sentence expresses a complete thought and usually begins with a capital letter.","Nouns name people, places or things. Verbs show actions or states. Pronouns can replace nouns.","Nouns, pronouns, verbs, adjectives and adverbs do different jobs in sentences. Identify each word by how it is used.","Tense tells when an action happens. Present is about now, past is about an earlier time and future is about what will happen.","Good reading means finding the main idea and details. Good writing has an organised beginning, middle and end, with correct spelling and punctuation."],
-"Hindi":["वर्णों से शब्द बनते हैं और शब्दों से वाक्य। सही उच्चारण और वर्तनी का अभ्यास करें।","किसी व्यक्ति, स्थान, वस्तु या भाव के नाम को संज्ञा कहते हैं। संज्ञा के स्थान पर आने वाले शब्द सर्वनाम कहलाते हैं।","काम के करने या होने का पता बताने वाला शब्द क्रिया कहलाता है। संज्ञा या सर्वनाम की विशेषता बताने वाला शब्द विशेषण है।","क्रिया के जिस रूप से काम के समय का पता चलता है, उसे काल कहते हैं। इसके मुख्य रूप वर्तमान, भूत और भविष्य काल हैं।","अनुच्छेद में एक मुख्य विषय पर 
+fill("bookClass",classes);fill("bookSubject",subjects);fill("noteSubject",subjects);
+document.getElementById("bookClass").addEventListener("change",updateBookHint);
+document.getElementById("bookSubject").addEventListener("change",updateBookHint);
+function updateBookHint(){document.getElementById("bookHint").textContent=`Selected: ${document.getElementById("bookClass").value} • ${document.getElementById("bookSubject").value}. Open the official NCERT portal and choose the same class and subject to find the available textbook.`}
+const notes={
+"Mathematics":{
+"Fractions":`FRACTIONS\n\nA fraction shows equal parts of a whole. It is written as a/b.\n\nNUMERATOR: The top number tells how many parts are taken.\nDENOMINATOR: The bottom number tells the total number of equal parts.\n\nExample: In 3/4, 3 is the numerator and 4 is the denominator.\n\nEQUIVALENT FRACTIONS: Fractions that have the same value. For example, 1/2 = 2/4 = 3/6.\n\nADDING LIKE FRACTIONS: Keep the denominator same and add numerators.\nExample: 1/5 + 2/5 = 3/5.\n\nSIMPLIFYING: Divide numerator and denominator by their common factor.\nExample: 4/8 = 1/2.\n\nRemember: The denominator can never be zero.`,
+"Perimeter and Area":`PERIMETER AND AREA\n\nPERIMETER is the total distance around a closed shape.\n\nAREA is the amount of surface covered by a flat shape.\n\nSQUARE:\nPerimeter = 4 × side\nArea = side × side\n\nRECTANGLE:\nPerimeter = 2 × (length + breadth)\nArea = length × breadth\n\nExample: A rectangle is 8 cm long and 3 cm wide.\nArea = 8 × 3 = 24 square cm.\nPerimeter = 2 × (8 + 3) = 22 cm.\n\nUnits: Perimeter uses units like cm or m. Area uses square units like cm² or m².`,
+"Decimals":`DECIMALS\n\nA decimal is another way to write a number that includes a part smaller than one whole.\n\nIn 4.27:\n4 is the ones digit, 2 is the tenths digit and 7 is the hundredths digit.\n\nADDING DECIMALS: Write decimal points one below another, then add.\nExample: 2.35 + 1.20 = 3.55.\n\nCOMPARING: First compare whole-number parts. If equal, compare digits after the decimal point.\n\nA zero at the end does not change the value: 2.5 = 2.50.`,
+"Algebra Basics":`INTRODUCTION TO ALGEBRA\n\nAlgebra uses letters to represent numbers. These letters are called variables.\n\nExample: x + 3 = 8.\nHere x is the unknown number.\n\nTo find x, subtract 3 from both sides:\nx = 8 - 3\nx = 5.\n\nA CONSTANT is a fixed number. A COEFFICIENT is the number multiplied by a variable. In 4y, 4 is the coefficient.\n\nRemember: Whatever operation you perform on one side of an equation, perform on the other side too.`
+},
+"Science":{
+"Parts of a Plant":`PARTS OF A PLANT\n\nROOT: Usually grows below the soil. It anchors the plant and absorbs water and minerals.\n\nSTEM: Supports the plant and transports water and food.\n\nLEAVES: Make food for the plant. They contain chlorophyll, which absorbs light.\n\nFLOWER: Helps many plants reproduce and form seeds.\n\nPHOTOSYNTHESIS: Green plants use sunlight, water and carbon dioxide to prepare food. Oxygen is released during this process.\n\nRemember: Roots, stems, leaves and flowers work together to help a plant live and grow.`,
+"States of Matter":`STATES OF MATTER\n\nMatter is anything that has mass and occupies space.\n\nSOLID: Has a fixed shape and fixed volume. Example: ice, stone.\n\nLIQUID: Has a fixed volume but takes the shape of its container. Example: water, milk.\n\nGAS: Has no fixed shape or fixed volume. Example: oxygen, water vapour.\n\nCHANGES OF STATE:\nMelting: solid to liquid.\nFreezing: liquid to solid.\nEvaporation: liquid to gas at the surface.\nCondensation: gas to liquid.\n\nHeating and cooling can change the state of a substance.`,
+"Human Digestive System":`HUMAN DIGESTIVE SYSTEM\n\nDigestion breaks food into simpler substances that the body can absorb and use.\n\nMOUTH: Teeth break food into smaller pieces. Saliva begins the digestion of starch.\n\nFOOD PIPE (OESOPHAGUS): Carries food to the stomach.\n\nSTOMACH: Churns food and mixes it with digestive juices.\n\nSMALL INTESTINE: Completes much digestion and absorbs most nutrients.\n\nLARGE INTESTINE: Absorbs water and helps form waste.\n\nA balanced diet, clean water and good hygiene support digestive health.`,
+"Photosynthesis":`PHOTOSYNTHESIS\n\nPhotosynthesis is the process by which green plants prepare food using light energy.\n\nPlants need:\n1. Sunlight — energy source.\n2. Water — absorbed mainly by roots.\n3. Carbon dioxide — enters through tiny openings in leaves.\n4. Chlorophyll — green pigment that absorbs light.\n\nThe plant makes glucose and releases oxygen.\n\nWord equation:\nCarbon dioxide + Water —(light and chlorophyll)→ Glucose + Oxygen\n\nImportance: It provides food for plants and releases oxygen into the atmosphere.`
+},
+"English":{
+"Parts of Speech":`PARTS OF SPEECH\n\nWords are grouped according to the work they do in a sentence.\n\nNOUN: Names a person, place, animal or thing. Example: teacher, Patna, book.\n\nPRONOUN: Used instead of a noun. Example: he, she, they, it.\n\nVERB: Shows an action or state. Example: run, write, is.\n\nADJECTIVE: Describes a noun. Example: a bright star.\n\nADVERB: Gives more information abou
