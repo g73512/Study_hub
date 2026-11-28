@@ -49,7 +49,7 @@ footer{text-align:center;color:#8993aa;padding:28px 15px;font-size:12px}
 <div class="hero-grid"><div><div class="eyebrow" style="color:#9debf0">LEARN • PRACTICE • ACHIEVE</div><h1>Make learning<br><span class="gradient">your superpower.</span></h1><p>One friendly place for school learning, smart study habits, career discovery and daily progress. Explore, practise and keep moving forward.</p><a class="cta" href="#dashboard" onclick="showTab('library')">Explore Learning&nbsp; →</a></div>
 <div class="hero-art"><div class="orbit"></div><div class="bookemoji">📚</div><span class="float f1">🚀 Dream big</span><span class="float f2">⭐ Small steps matter</span><span class="float f3">💡 Keep learning</span></div></div>
 </div></header>
-<nav><div class="navinner" id="nav"><button class="active" data-tab="dashboard">Dashboard</button><button data-tab="library">Books & PDFs</button><button data-tab="notes">Study Notes</button><button data-tab="quiz">Practice Quiz</button><button data-tab="planner">Study Planner</button><button data-tab="careers">Career Explorer</button><button data-tab="progress">My Progress</button></div></nav>
+<nav><div class="navinner" id="nav"><button class="active" data-tab="dashboard">Dashboard</button><button data-tab="library">Book Links</button><button data-tab="notes">Study Notes</button><button data-tab="quiz">Practice Quiz</button><button data-tab="planner">Study Planner</button><button data-tab="careers">Career Explorer</button><button data-tab="progress">My Progress</button><button data-tab="admin">Admin Dashboard</button></div></nav>
 <main>
 <section id="dashboard" class="panel active">
 <div class="sectionhead"><div><div class="eyebrow">YOUR SPACE</div><h2>Welcome, future achiever! 👋</h2><p class="sub">Choose a learning goal and make today count.</p></div></div>
@@ -61,7 +61,7 @@ footer{text-align:center;color:#8993aa;padding:28px 15px;font-size:12px}
 </div>
 <div class="sectionhead"><div><div class="eyebrow">EXPLORE</div><h2>Your learning toolkit</h2></div></div>
 <div class="grid">
-<div class="card feature"><div class="bigico">📖</div><h3>Books & PDFs</h3><p>Find official NCERT textbooks and digital learning resources.</p><div class="actions"><button class="btn" onclick="showTab('library')">Open library →</button></div></div>
+<div class="card feature"><div class="bigico">📖</div><h3>Book Links</h3><p>Open official textbook and learning-resource websites.</p><div class="actions"><button class="btn" onclick="showTab('library')">Open book links →</button></div></div>
 <div class="card feature"><div class="bigico" style="background:#e8fbfb">✍️</div><h3>Easy Study Notes</h3><p>Revise key ideas with simple, beginner-friendly notes.</p><div class="actions"><button class="btn" onclick="showTab('notes')">Read notes →</button></div></div>
 <div class="card feature"><div class="bigico" style="background:#fff2f8">🧩</div><h3>Quick Quizzes</h3><p>Test your understanding and learn from every attempt.</p><div class="actions"><button class="btn" onclick="showTab('quiz')">Take a quiz →</button></div></div>
 <div class="card feature"><div class="bigico" style="background:#fff6e8">🗓️</div><h3>Daily Study Plan</h3><p>Break big goals into small tasks you can finish each day.</p><div class="actions"><button class="btn" onclick="showTab('planner')">Plan today →</button></div></div>
@@ -70,7 +70,7 @@ footer{text-align:center;color:#8993aa;padding:28px 15px;font-size:12px}
 </section>
 
 <section id="library" class="panel">
-<div class="sectionhead"><div><div class="eyebrow">DIGITAL LIBRARY</div><h2>Books & PDF resources 📚</h2><p class="sub">Choose your grade and subject, then open trusted learning sources.</p></div></div>
+<div class="sectionhead"><div><div class="eyebrow">DIGITAL LIBRARY</div><h2>Official Book Links 📚</h2><p class="sub">Books are not stored here. Choose your class and subject, then open an official book portal.</p></div></div>
 <div class="card"><div class="grid2"><div><label for="bookClass">Select grade</label><select id="bookClass"></select></div><div><label for="bookSubject">Select subject</label><select id="bookSubject"></select></div></div>
 <div class="actions"><a class="btn primary" href="https://ncert.nic.in/textbook.php" target="_blank" rel="noopener">Open NCERT Textbooks ↗</a><a class="btn" href="https://epathshala.nic.in/" target="_blank" rel="noopener">Explore ePathshala ↗</a></div>
 </div>
@@ -87,7 +87,7 @@ footer{text-align:center;color:#8993aa;padding:28px 15px;font-size:12px}
 <div class="sectionhead"><div><div class="eyebrow">REVISION CORNER</div><h2>Simple study notes ✍️</h2><p class="sub">Select a subject and topic to read a quick explanation.</p></div></div>
 <div class="card"><div class="grid2"><div><label for="noteGrade">Grade</label><select id="noteGrade"></select></div><div><label for="noteSubject">Subject</label><select id="noteSubject"></select></div></div><label for="noteTopic">Topic</label><select id="noteTopic"></select>
 <div class="notecontent" id="noteContent" style="margin-top:14px">Choose a subject and topic to display notes here.</div><div class="actions no-print"><button class="btn primary" onclick="window.print()">Print / Save as PDF</button></div>
-<p class="muted">These are starter notes, not a complete textbook or official syllabus. More chapter-wise notes can be added for your board and grade.</p></div>
+<p class="muted">Starter notes are included for Classes 1–12 across all six subjects. They are not a replacement for your prescribed textbook or official syllabus.</p></div>
 </section>
 
 <section id="quiz" class="panel"><div class="sectionhead"><div><div class="eyebrow">BRAIN BOOST</div><h2>Quick practice quiz 🧠</h2><p class="sub">Choose one answer for each question and check your score.</p></div></div>
@@ -102,8 +102,9 @@ footer{text-align:center;color:#8993aa;padding:28px 15px;font-size:12px}
 </section>
 
 <section id="progress" class="panel"><div class="sectionhead"><div><div class="eyebrow">EVERY STEP COUNTS</div><h2>My progress 🏆</h2><p class="sub">Your checked planner tasks are saved on this device.</p></div></div>
-<div class="card"><div class="stat"><div class="ico">⭐</div><div><b id="doneCount">0</b><small>Tasks completed</small></div></div><div class="progressbar" style="margin:15px 0"><span id="progressBar"></span></div><p id="progressText" class="muted">Start with one small task today.</p><button class="btn" onclick="resetTasks()">Reset today's checkmarks</button></div>
+<div class="card"><div class="stat"><div class="ico">⭐</div><div><b id="doneCount">0</b><small>Tasks completed</small></div></div><div class="progressbar" style="margin:15px 0"><span id="progressBar"></span></div><p id="progressText" class="muted">Start with one small task today.</p><div class="tip" style="margin:14px 0"><b>⭐ Study Rewards</b><p id="rewardText" class="muted">Complete tasks to earn points and badges.</p><div id="rewardBadges" class="actions"></div></div><button class="btn" onclick="resetTasks()">Reset today's checkmarks</button></div>
 </section>
+<section id="admin" class="panel"><div class="sectionhead"><div><div class="eyebrow">ADMIN TOOLS</div><h2>Admin Dashboard ⚙️</h2><p class="sub">Demo content-management area.</p></div></div><div class="card"><h3>Manage study content</h3><p class="muted">Use this area as the planned place to add and organise more class-wise notes and official book links. A secure online admin system needs a backend and admin authentication.</p><p class="muted">Current demo notes are built into this HTML file. Ask for an expanded admin editor when the website is connected to a database.</p></div></section>
 </main>
 <footer>STUDY HUB • Learn something today. Become someone tomorrow. ✨<br>Educational demo website • Built for curious learners</footer>
 <script>
@@ -111,35 +112,17 @@ const grades=Array.from({length:12},(_,i)=>"Grade "+(i+1));
 const subjects=["Mathematics","Science","English","Hindi","Social Science","Computer Science"];
 function fill(id,arr){document.getElementById(id).innerHTML=arr.map(x=>`<option>${x}</option>`).join("")}
 ["bookClass","noteGrade"].forEach(id=>fill(id,grades));["bookSubject","noteSubject"].forEach(id=>fill(id,subjects));
-const notes={
-"Mathematics|Fractions":`FRACTIONS\n\nA fraction represents equal parts of a whole. In 1/2, the top number (1) is the numerator and the bottom number (2) is the denominator.\n\nExample: 1/4 + 1/4 = 2/4 = 1/2.\n\nRemember: When denominators are the same, add or subtract the numerators and keep the denominator unchanged.`,
-"Science|Parts of a plant":`PARTS OF A PLANT\n\nRoots absorb water and minerals from the soil. The stem supports the plant and transports water. Leaves make food using sunlight. Flowers help plants produce seeds.\n\nPhotosynthesis is the process by which green plants use sunlight, water and carbon dioxide to make food and release oxygen.`,
-"Social Science|The Constitution of India":`THE CONSTITUTION OF INDIA\n\nA constitution is a set of basic rules and principles by which a country is governed. It explains how institutions work and protects citizens' rights.\n\nThe Constitution of India was adopted on 26 November 1949 and came into effect on 26 January 1950.`,
-"Computer Science|Introduction to computers":`INTRODUCTION TO COMPUTERS\n\nA computer is an electronic device that processes data according to instructions.\n\nInput devices include a keyboard and mouse. The CPU processes instructions. Output devices include a monitor and printer.\n\nComputers are used for learning, communication, calculations and storing information.`,
-"English|Parts of speech":`PARTS OF SPEECH\n\nWords are grouped by the jobs they do in a sentence. Common groups include nouns (names), pronouns (replace nouns), verbs (actions or states), adjectives (describe nouns), and adverbs (describe verbs, adjectives or other adverbs).\n\nExample: The quick bird flies. “Bird” is a noun, “quick” is an adjective and “flies” is a verb.`,
-"Hindi|Noun (Sangya)":`SANGYA (NOUN)\n\nA word used as the name of a person, place, thing or feeling is called a noun (Sangya).\n\nExamples: Ram, book, Patna, honesty.\n\nCommon types include proper noun, common noun and abstract noun.`
+const notes={};
+const noteTopics={
+"Mathematics":["Numbers and counting","Addition and subtraction","Multiplication and division","Fractions and decimals","Algebra and equations"],
+"Science":["Living and non-living things","Plants and animals","Matter and materials","Force, energy and motion","Ecosystems and environment"],
+"English":["Words and sentences","Nouns and verbs","Parts of speech","Tenses and grammar","Reading and writing skills"],
+"Hindi":["वर्ण और शब्द","संज्ञा और सर्वनाम","क्रिया और विशेषण","काल और वाक्य","अनुच्छेद लेखन"],
+"Social Science":["Our family and community","Maps and directions","History and timelines","Democracy and Constitution","Resources and environment"],
+"Computer Science":["Parts of a computer","Hardware and software","Using the internet safely","Algorithms and coding","Data and digital citizenship"]
 };
-function updateTopics(){let s=document.getElementById("noteSubject").value;let list=Object.keys(notes).filter(k=>k.startsWith(s+"|")).map(k=>k.split("|")[1]);if(!list.length)list=["Notes coming soon"];fill("noteTopic",list);showNote()}
-function showNote(){let k=document.getElementById("noteSubject").value+"|"+document.getElementById("noteTopic").value;document.getElementById("noteContent").textContent=notes[k]||"Chapter notes for this subject are being prepared. Please use the official textbook links in Books & PDFs for the complete chapter content."}
-document.getElementById("noteSubject").addEventListener("change",updateTopics);document.getElementById("noteTopic").addEventListener("change",showNote);
-const questions=[["What is the capital of India?",["Mumbai","New Delhi","Kolkata"],1],["What is 8 × 7?",["54","56","64"],1],["Which gas do plants release during photosynthesis?",["Oxygen","Nitrogen","Helium"],0],["What does CPU stand for?",["Central Processing Unit","Computer Power Utility","Control Print Unit"],0]];
-document.getElementById("quizArea").innerHTML=questions.map((q,i)=>`<div class="question"><b>${i+1}. ${q[0]}</b>${q[1].map((a,j)=>`<label><input type="radio" name="q${i}" value="${j}"> ${a}</label>`).join("")}</div>`).join("");
-function checkQuiz(){let score=0;questions.forEach((q,i)=>{let a=document.querySelector(`input[name=q${i}]:checked`);if(a&&+a.value===q[2])score++});document.getElementById("quizResult").textContent=`Your score: ${score} / ${questions.length}. ${score===questions.length?"Excellent work! 🎉":"Good effort! Review and try again. 💪"}`}
-const careerData={
-"Police Constable":"Study focus: language, general knowledge, reasoning and basic mathematics. Recruitment rules, age limits, education and physical standards vary by state and notification. Check your state police recruitment website.",
-"IPS Officer":"IPS officers are selected through the UPSC Civil Services Examination. A recognised university degree is required. Build strong foundations in history, geography, the Constitution, current affairs and writing.",
-"Engineer":"Mathematics and science are important foundations. Explore physics, maths, problem-solving and coding. Entrance requirements depend on the institution and course.",
-"Doctor":"Medical study in India generally requires the relevant school subjects and admission through NEET-UG under current rules. Build foundations in biology, chemistry and physics.",
-"Teacher":"Requirements depend on the teaching level and state. Relevant degrees, teacher education qualifications and eligibility tests may be required. Practise communication and subject knowledge.",
-"Software Developer":"Start with computer basics, logical thinking and programming. Python is a friendly first language. Build small projects and practise problem-solving."
-};
-fill("careerSelect",Object.keys(careerData));function showCareer(){document.getElementById("careerInfo").textContent=careerData[document.getElementById("careerSelect").value]}document.getElementById("careerSelect").addEventListener("change",showCareer);showCareer();
-let tasks=JSON.parse(localStorage.getItem("sh_tasks_v2")||'["Study Mathematics for 20 minutes","Read one Science topic","Revise yesterday’s notes"]');let done=JSON.parse(localStorage.getItem("sh_done_v2")||"[]");
-function renderTasks(){document.getElementById("tasks").innerHTML=tasks.map((t,i)=>`<div class="task ${done.includes(i)?"done":""}"><input type="checkbox" ${done.includes(i)?"checked":""} onchange="toggleTask(${i},this.checked)"><span>${t}</span></div>`).join("");let n=done.length,p=tasks.length?Math.round(n/tasks.length*100):0;document.getElementById("taskCount").textContent=`${n} / ${tasks.length}`;document.getElementById("bar").style.width=p+"%";document.getElementById("doneCount").textContent=n;document.getElementById("progressBar").style.width=p+"%";document.getElementById("dashDone").textContent=n;document.getElementById("progressText").textContent=p===100&&tasks.length?"Amazing! You completed every task. Keep your learning streak going!":`You have completed ${n} of ${tasks.length} tasks. Keep going, one step at a time!`;localStorage.setItem("sh_tasks_v2",JSON.stringify(tasks));localStorage.setItem("sh_done_v2",JSON.stringify(done))}
-function toggleTask(i,v){done=v?[...new Set([...done,i])]:done.filter(x=>x!==i);renderTasks()}
-function addTask(){let v=document.getElementById("newTask").value.trim();if(!v)return;tasks.push(v);document.getElementById("newTask").value="";renderTasks()}
-function resetTasks(){done=[];renderTasks()}
-function showTab(id){document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("active",p.id===id));document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("active",b.dataset.tab===id));window.scrollTo({top:0,behavior:"smooth"})}
-document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.tab)));
-updateTopics();renderTasks();
-</script></body></html>
+const noteExplanations={
+"Mathematics":["Numbers help us count, compare and measure. Practise reading, writing and arranging numbers.","Addition combines quantities. Subtraction finds the difference. Use objects or drawings to check your answer.","Multiplication is repeated addition. Division shares quantities into equal groups. Learn tables and practise both operations.","A fraction shows equal parts of a whole. The numerator shows selected parts and the denominator shows total equal parts. Decimals also represent parts of a whole.","A variable is a letter used for an unknown number. An equation says two expressions are equal. Use inverse operations and keep both sides balanced."],
+"Science":["Living things grow and carry out life processes. Non-living things do not. Observe similarities and differences around you.","Plants make food using sunlight, water and carbon dioxide. Animals depend on plants or other animals for food.","Matter has mass and occupies space. Solids, liquids and gases have different properties. Heating or cooling can change the state of some materials.","A force is a push or pull that can change motion or shape. Energy is needed to make things happen. Forms include light, heat, sound and electrical energy.","An ecosystem includes living organisms and their surroundings. Food chains show how energy passes between organisms. Protecting habitats helps biodiversity."],
+"English":["Words join to make sentences. A sentence expresses a complete thought and usually begins with a capital letter.","Nouns name people, places or things. Verbs show actions or states. Pronouns can replace nouns.","Nouns, pronouns, verbs, adjectives and adverbs do different jobs in sentences. Identify each word by how it is used.","Tense tells when an action happens. Present is about now, past is about an earlier time and future is about what will happen.","Good reading means finding the main idea and details. Good writing has an organised beginning, middle and end, with correct spelling and punctuation."],
+"Hindi":["वर्णों से शब्द बनते हैं और शब्दों से वाक्य। सही उच्चारण और वर्तनी का अभ्यास करें।","किसी व्यक्ति, स्थान, वस्तु या भाव के नाम को संज्ञा कहते हैं। संज्ञा के स्थान पर आने वाले शब्द सर्वनाम कहलाते हैं।","काम के करने या होने का पता बताने वाला शब्द क्रिया कहलाता है। संज्ञा या सर्वनाम की विशेषता बताने वाला शब्द विशेषण है।","क्रिया के जिस रूप से काम के समय का पता चलता है, उसे काल कहते हैं। इसके मुख्य रूप वर्तमान, भूत और भविष्य काल हैं।","अनुच्छेद में एक मुख्य विषय पर 
